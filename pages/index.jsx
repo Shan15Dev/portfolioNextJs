@@ -9,8 +9,9 @@ import Button from '@mui/material/Button';
 
 export default function Home() {
   return (
-    <div>
-
+    <div className='text-white text-center'>
+      <h1 className='mt-5 font-bold text-4xl'>Hello, I am Shan</h1>
+      <p className='mt-2'>I am a first year apprentice in Software Engineering. I am a full stack developer. For frontend I use NextJS or ReactJS and for the backend I use C# or Java</p>
     </div>
   )
 }
