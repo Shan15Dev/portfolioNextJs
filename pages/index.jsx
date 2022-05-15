@@ -15,6 +15,7 @@ export default function Home() {
         developer. For frontend I use NextJS or ReactJS and for the backend I
         use C# or Java
       </p>
+      <a className="twitter-timeline" href="https://twitter.com/Shan15dev?ref_src=twsrc%5Etfw">Tweets by Shan15dev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </div>
   );
 }
