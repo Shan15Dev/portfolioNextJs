@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 
 export default function Navbar({ session }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,12 +30,60 @@ export default function Navbar({ session }) {
               alt="Logo of Shan"
             />
           </Link>
+          <h1 className="text-lg">Shan</h1>
+
+
+        </div>
+        <div>
+          {isOpen ? (
+            <button
+              className="outline-none mobile-menu-button"
+              onClick={handleMobileMenu}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          ) : (
+            <div className="md:hidden flex items-center">
+              <button
+                className="outline-none mobile-menu-button md:hidden"
+                onClick={handleMobileMenu}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 md:hidden"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+              </button>
+            </div>
+          )}
         </div>
 
         <ul
           className={`md:flex ${
             isOpen ? "block" : "hidden"
-          } text-center place-items-center md:align-middle`}
+          } text-center place-items-center md:align-middle md:`}
         >
           <Link
             href="/"
