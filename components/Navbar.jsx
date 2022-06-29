@@ -21,7 +21,7 @@ export default function Navbar({ session }) {
     <div
       className={`sticky top-0.5 ${blur} dark:backdrop-blur-none dark:bg-slate-700 md:dark:bg-slate-700 dark:top-0 dark:text-white md:dark:top-0 md:top-0 md:bg-slate-100`}
     >
-      <div className="md:grid md:grid-cols-2 place-items-center shadow-lg	mb2">
+      <div className="md:grid md:grid-cols-3 place-items-center shadow-lg	mb2">
         <div className="grid grid-cols-4 place-items-center md:grid-cols-3">
           <Link href="/" passHref>
             <img
@@ -31,10 +31,7 @@ export default function Navbar({ session }) {
             />
           </Link>
           <h1 className="text-lg">Shan</h1>
-
-
-        </div>
-        <div>
+          <div className="col-start-4">
           {isOpen ? (
             <button
               className="outline-none mobile-menu-button"
@@ -79,6 +76,9 @@ export default function Navbar({ session }) {
             </div>
           )}
         </div>
+
+        </div>
+        
 
         <ul
           className={`md:flex ${
